@@ -4,7 +4,7 @@ stages:
   - build
   - test
   - review
-  - stage 
+  - stage
   - production
 
 variables:
@@ -42,15 +42,19 @@ deploy_dev_job:
 staging:
   stage: stage
   when: manual
+  only:
+    - /^\d+\.\d+\.\d+/
   script:
     - echo'Deploy'
   environment:
     name: stage
-    url: https://beta.example.com 
+    url: https://beta.example.com
 
 production:
   stage: production
   when: manual
+  only:
+    - /^\d+\.\d+\.\d+/
   script:
    - echo'Deploy'
   environment:
