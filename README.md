@@ -55,3 +55,9 @@ bakaevmm microservices repository
 В stage и prod окружениях сделал запуск "по кнопке"
 Создали расширенный пайплайн
 Научились создавать динамические окружения для деплоя из отдельных веток
+
+
+## HW #17 monitoring 1
+
+* Ссылка на dockerhub
+https://hub.docker.com/u/bakaevmm
