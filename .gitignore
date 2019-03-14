@@ -4,5 +4,6 @@
 *.tfvars
 *.retry
 *.log
-docker-monolith/infra/packer/variables.json
-docker-monolith/infra/terraform/.terraform/
+docker/docker-monolith/infra/packer/variables.json
+docker/docker-monolith/infra/terraform/.terraform/
+docker/.env
