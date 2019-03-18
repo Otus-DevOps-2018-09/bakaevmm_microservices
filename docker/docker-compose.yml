@@ -52,7 +52,19 @@ services:
       - '--path.procfs=/host/proc'
       - '--path.sysfs=/host/sys'
       - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
-
+  mongodb-exporter:
+    image: ${USERNAME}/mongodb-exporter:${MONGODB_EXPORTER_VER}
+    networks:
+      - back_net
+    command:
+      - '--mongodb.uri=mongodb://post_db:27017'
+  cloudprober:
+    image: ${USERNAME}/cloudprober:${CLOUDPROB_VER}
+    ports:
+      - '9313:9313'
+    networks:
+      - front_net
+      - back_net
 
 volumes:
   post_db:
