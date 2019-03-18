@@ -69,3 +69,11 @@ bakaevmm microservices repository
 
 * Ссылка на dockerhub
 https://hub.docker.com/u/bakaevmm
+
+### Задания со *
+
+Для експорта метрик mongodb использовано решение https://github.com/percona/mongodb_exporter.
+Создан Dockerfile со скомпилированным приложением, адрес mongo передаём через docker-compose.
+Для выполнения black_box проверок использован Cloudprober. 
+Написан Dockerfile, где используется конфиг для мониторинга helthcheck контейнеров приложений. 
+Написан makefile позволяющий собрать и запушить все необходимые образа.
