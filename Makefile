@@ -54,4 +54,4 @@ push_telegraf:
 		docker push ${USER_NAME}/telegraf
 
 push_grafana:
-		docker push${USER_NAME}/grafana
+		docker push ${USER_NAME}/grafana
