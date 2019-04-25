@@ -42,7 +42,7 @@
     }
   ],
   "id": null,
-  "title": "Docker_and_system_monitoring_cAdvisor",
+  "title": "DockerMonitoring",
   "description": "A simple overview of the most important Docker host and container metrics. (cAdvisor/Prometheus)",
   "tags": [],
   "style": "dark",
