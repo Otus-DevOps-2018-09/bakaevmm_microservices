@@ -8,3 +8,11 @@ receivers:
 - name: 'slack-notifications'
   slack_configs:
   - channel: '#mikhail_bakaev'
+
+  email_configs:
+  - to: test@1gmail.com
+    from: test@1gmail.com
+    smarthost: smtp.gmail.com:587
+    auth_username: test@1gmail.com
+    auth_identity: btest@1gmail.com
+    auth_password: testpaswd

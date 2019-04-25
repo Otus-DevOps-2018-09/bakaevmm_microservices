@@ -53,14 +53,12 @@ services:
     ports:
       - '8080:8080'
   grafana:
-    image: grafana/grafana:5.0.0
+    image: ${USER_NAME}/grafana
     volumes:
       - grafana_data:/var/lib/grafana
-    environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=secret
     depends_on:
       - prometheus
+    user: "104"
     networks:
       - back_net
       - front_net
@@ -75,6 +73,15 @@ services:
       - front_net
     ports:
       - 9093:9093
+  telegraf:
+    image: ${USER_NAME}/telegraf
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - back_net
+      - front_net
+    ports:
+      - 9273:9273
 
 
 volumes:
